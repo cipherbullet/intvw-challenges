@@ -57,6 +57,3 @@ include => a2billing_monitoring
 include => a2billing_voucher
 
 ```
-
-Share the result with user: `mason-chase` on GitHub in private mode.
-
