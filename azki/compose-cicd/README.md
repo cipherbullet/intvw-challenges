@@ -22,3 +22,4 @@ Create a pipeline which build and deploy the app with docker-compose when we cre
 For this, there is two solution
 1. Filling ENV from docker-compose hard-coded variables
 2. Using Gitlab variables to fill the ENV
+https://able.bio/rhett/how-to-set-and-get-environment-variables-in-python--274rgt5
