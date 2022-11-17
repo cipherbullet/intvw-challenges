@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  app:
+    container_name: getip
+    image: getip:${CI_COMMIT_TAG}
+    ports:
+      - 5000:5000
+    environment:
+      db-host: mysql
+      db-name: mydatabase
+      db-user: candidate
+      db-pass: challange
+    depends_on:
+      - mysql
+  mysql:
+    container_name: mysql
+    image: mysql:8.0
+    environment:
+      MYSQL_DATABASE: 'mydatabase'
+      # So you don't have to use root, but you can if you like
+      MYSQL_USER: 'candidate'
+      # You can use whatever password you like
+      MYSQL_PASSWORD: 'challange'
+      # Password for root access
+      MYSQL_ROOT_PASSWORD: 'password'

@@ -1,0 +1,25 @@
+stages:
+    - build
+    - deploy
+
+build:
+    stage: build
+    script:
+        - cd /opt/azki/khan-1-javad/
+        - docker build -t getip:$CI_COMMIT_TAG .
+    only:
+        refs:
+            - tags
+        variables:
+            - $CI_BUILD_REF_NAME =~ /-stable$/
+
+deploy:
+    stage: deploy
+    script:
+        - docker compose -f /opt/azki/docker-compose.yml up -d
+    only:
+        refs:
+            - tags
+        variables:
+            - $CI_BUILD_REF_NAME =~ /-stable$/
+
