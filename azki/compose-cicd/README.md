@@ -15,12 +15,12 @@ Create a pipeline which build and deploy the app with docker-compose when we cre
 1. Dockerize the application
 2. Run the application with docker-compose
 3. Setup CICD pipeline with GitlabCI
-  1. Register gitlab-runner that installed on the target vm. 
-  2. Basic pipeline with build & deploy stages
-  3. The pipeline should trigger by tags
-  4. Deploy with docker-compose
+  - Register gitlab-runner that installed on the target vm. 
+  - Basic pipeline with build & deploy stages
+  - The pipeline should trigger by tags
+  - Deploy with docker-compose
 4. Change the code to fill database connection string with ENV
 For this, there is two solution
 1. Filling ENV from docker-compose hard-coded variables
-2. Using Gitlab variables to fill the ENV
-https://able.bio/rhett/how-to-set-and-get-environment-variables-in-python--274rgt5
+2. Using Gitlab variables to fill the ENV\
+[python env vars](https://able.bio/rhett/how-to-set-and-get-environment-variables-in-python--274rgt5)
