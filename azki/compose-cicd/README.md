@@ -1,4 +1,4 @@
-## The Description that company shared
+## Provided Description
 
 This is a simple project to get user ip.
 It is tested with python3.8 successfully.
